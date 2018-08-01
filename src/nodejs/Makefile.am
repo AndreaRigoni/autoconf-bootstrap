@@ -34,6 +34,9 @@ clean: clean-deps
 	@ $(info not implemented yet)
 
 
+ATOM_PACKAGES += nuclide
+ATOM_PROJECT_PATH = $(srcdir) $(builddir)
+
 
 bin_PROGRAMS  = extn1
 extn1_SOURCES = extn1.cpp
