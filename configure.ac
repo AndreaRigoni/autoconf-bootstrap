@@ -103,29 +103,11 @@ m4_sinclude(conf/kscripts/toolchain.ac)
 ## PYTHON ##
 m4_sinclude(conf/kscripts/python.ac)
 
-## CODAC ##
-# m4_sinclude(conf/kscripts/iter_codac.ac)
-
-## QT ##
-m4_sinclude(conf/kscripts/qtdesktop.ac)
-
-## NODEJS ##
-m4_sinclude(conf/kscripts/nodejs.ac)
-
 ## DOXYGEN ##
 m4_sinclude(conf/autoconf-doxygen/doxygen.ac)
 
-## EXT_LIBJIT ##
-m4_sinclude(conf/kscripts/ext_libjit.ac)
-
-## EXT_LLVM ##
-m4_sinclude(conf/kscripts/ext_llvm.ac)
-
 ## EXT_CCSTICKERS ##
 m4_sinclude(conf/kscripts/ext_ccStickers.ac)
-
-## EXT_NODEJS_NODE ##
-m4_sinclude(conf/kscripts/ext_nodejs_node.ac)
 
 ## EXT_MDSPLUS ##
 m4_sinclude(conf/kscripts/ext_mdsplus.ac)
@@ -133,16 +115,11 @@ m4_sinclude(conf/kscripts/ext_mdsplus.ac)
 
 ## EXT ##
 AX_KCONFIG_MODULES([EXT],
-		  [libjit],[libjit external sources],
-		  [llvm],[llvm external sources],
 		  [ccStickers],[ccStickers external sources],
-		  [nodejs-node],[nodejs node external sources],
 		  [mdsplus],[mdsplus external sources]
 		  )
 AC_SUBST([EXT_MODULES])
 
-## YOCTO ##
-m4_sinclude(conf/kscripts/yocto.ac)
 
 ## // GIT IGNORE // ##
 AX_GITIGNORE_ADD_PATH([${builddir}])
@@ -170,14 +147,6 @@ AC_SUBST(MDS_LV)
 AC_SUBST(MDS_NI)
 AC_SUBST(MDS_MODULES)
 
-
-AX_KCONFIG_MODULES([],[mod1],[],
-		      [mod2],[],
-		      [mod3],[])
-AC_SUBST(MOD1)
-AC_SUBST(MOD2)
-AC_SUBST(MOD3)
-AC_SUBST(MODULES)
 
 
 AS_ECHO()
