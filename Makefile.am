@@ -25,7 +25,7 @@ include Common.mk
 AM_MAKEFLAGS = -j$(MAKE_PROCESS)
 ACLOCAL_AMFLAGS = -I conf/m4
 
-SUBDIRS = conf/kconfig src ext docs
+SUBDIRS = conf/kconfig ext docs examples
 
 all: ## all target ( default if no target selected )
 all:

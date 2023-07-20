@@ -188,14 +188,14 @@ AM_CONDITIONAL(MAKE_RPMS, test x$make_rpms = xtrue)
 AC_CONFIG_FILES( 
                  Makefile
 				 .gitignore
-				 src/Makefile
-				 src/qt_example/Makefile
-				 src/sh_template/Makefile
-				 src/parse_examples/Makefile
-				 src/nodejs/Makefile				 
-				 src/project_variables/Makefile
-				 src/mds_example/Makefile
-				 src/jp_notebook/Makefile
+				 examples/Makefile
+				 examples/qt_example/Makefile
+				 examples/sh_template/Makefile
+				 examples/parse_examples/Makefile
+				 examples/nodejs/Makefile				 
+				 examples/project_variables/Makefile
+				 examples/mds_example/Makefile
+				 examples/jp_notebook/Makefile
 				 docs/Makefile
 				 docs/example_jpnb/Makefile
 				 ext/Makefile
