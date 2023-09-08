@@ -103,29 +103,11 @@ m4_sinclude(conf/kscripts/toolchain.ac)
 ## PYTHON ##
 m4_sinclude(conf/kscripts/python.ac)
 
-## CODAC ##
-# m4_sinclude(conf/kscripts/iter_codac.ac)
-
-## QT ##
-m4_sinclude(conf/kscripts/qtdesktop.ac)
-
-## NODEJS ##
-m4_sinclude(conf/kscripts/nodejs.ac)
-
 ## DOXYGEN ##
 m4_sinclude(conf/autoconf-doxygen/doxygen.ac)
 
-## EXT_LIBJIT ##
-m4_sinclude(conf/kscripts/ext_libjit.ac)
-
-## EXT_LLVM ##
-m4_sinclude(conf/kscripts/ext_llvm.ac)
-
 ## EXT_CCSTICKERS ##
 m4_sinclude(conf/kscripts/ext_ccStickers.ac)
-
-## EXT_NODEJS_NODE ##
-m4_sinclude(conf/kscripts/ext_nodejs_node.ac)
 
 ## EXT_MDSPLUS ##
 m4_sinclude(conf/kscripts/ext_mdsplus.ac)
@@ -133,16 +115,11 @@ m4_sinclude(conf/kscripts/ext_mdsplus.ac)
 
 ## EXT ##
 AX_KCONFIG_MODULES([EXT],
-		  [libjit],[libjit external sources],
-		  [llvm],[llvm external sources],
 		  [ccStickers],[ccStickers external sources],
-		  [nodejs-node],[nodejs node external sources],
 		  [mdsplus],[mdsplus external sources]
 		  )
 AC_SUBST([EXT_MODULES])
 
-## YOCTO ##
-m4_sinclude(conf/kscripts/yocto.ac)
 
 ## // GIT IGNORE // ##
 AX_GITIGNORE_ADD_PATH([${builddir}])
@@ -170,14 +147,6 @@ AC_SUBST(MDS_LV)
 AC_SUBST(MDS_NI)
 AC_SUBST(MDS_MODULES)
 
-
-AX_KCONFIG_MODULES([],[mod1],[],
-		      [mod2],[],
-		      [mod3],[])
-AC_SUBST(MOD1)
-AC_SUBST(MOD2)
-AC_SUBST(MOD3)
-AC_SUBST(MODULES)
 
 
 AS_ECHO()
@@ -215,18 +184,17 @@ AX_RPM_INIT
 AM_CONDITIONAL(MAKE_RPMS, test x$make_rpms = xtrue)
 
 
-
 AC_CONFIG_FILES( 
                  Makefile
 				 .gitignore
-				 src/Makefile
-				 src/qt_example/Makefile
-				 src/sh_template/Makefile
-				 src/parse_examples/Makefile
-				 src/nodejs/Makefile				 
-				 src/project_variables/Makefile
-				 src/mds_example/Makefile
-				 src/jp_notebook/Makefile
+				 examples/Makefile
+				 examples/qt_example/Makefile
+				 examples/sh_template/Makefile
+				 examples/parse_examples/Makefile
+				 examples/nodejs/Makefile				 
+				 examples/project_variables/Makefile
+				 examples/mds_example/Makefile
+				 examples/jp_notebook/Makefile
 				 docs/Makefile
 				 docs/example_jpnb/Makefile
 				 ext/Makefile

@@ -19,13 +19,13 @@
 ## ////////////////////////////////////////////////////////////////////////// //
 
 include Common.mk
-include $(top_srcdir)/conf/kscripts/yocto.mk
+# include $(top_srcdir)/conf/kscripts/yocto.mk
 
 
 AM_MAKEFLAGS = -j$(MAKE_PROCESS)
 ACLOCAL_AMFLAGS = -I conf/m4
 
-SUBDIRS = conf/kconfig src ext docs
+SUBDIRS = conf/kconfig ext docs examples
 
 all: ## all target ( default if no target selected )
 all:
@@ -35,7 +35,6 @@ clean: ## clean
 # these are example of varaiables comments that appear in help
 #@ CFLAGS     set C/C++ compiler flags
 #@ CPPFLAGSS  set C/C++ precompiler flags
-
 
 DISTCLEANFILES = .config .config.old
 

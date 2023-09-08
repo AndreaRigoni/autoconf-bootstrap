@@ -3,10 +3,8 @@
 # //////////////////////////////////////////////////////////////////////////// #
 #
 include $(top_srcdir)/Common.mk
-
-if ENABLE_QT
 include $(top_srcdir)/conf/kscripts/qtdesktop.mk
-endif
+
 
 PRO = qt_example.pro
 
