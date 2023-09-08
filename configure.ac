@@ -184,7 +184,6 @@ AX_RPM_INIT
 AM_CONDITIONAL(MAKE_RPMS, test x$make_rpms = xtrue)
 
 
-
 AC_CONFIG_FILES( 
                  Makefile
 				 .gitignore
